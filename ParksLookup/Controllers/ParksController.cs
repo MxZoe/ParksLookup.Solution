@@ -118,7 +118,7 @@ namespace ParksLookup.Controllers
 
     // GET: api/parks/colorado
      [HttpGet("{location}")]
-     public async Task<ActionResult<IEnumerable<Floss>>> GetLocation(string location)
+     public async Task<ActionResult<IEnumerable<Park>>> GetLocation(string location)
      {
   
      var query = _db.Parks.AsQueryable();
