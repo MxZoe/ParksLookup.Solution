@@ -50,7 +50,7 @@ namespace ParksLookup.Controllers
          return park;
      }
 
-        // PUT: api/Parks/5
+    // PUT: api/Parks/5
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, Park park)
     {
@@ -100,8 +100,8 @@ namespace ParksLookup.Controllers
       return NoContent();
     }
 
-    // GET: api/Parks/ZionNationalPark
-    [HttpGet("{name}")]
+    // GET: api/Parks/name=ZionNationalPark
+    [HttpGet("name={name}")]
     public async Task<ActionResult<IEnumerable<Park>>> GetName(string name)
     {
   
@@ -116,8 +116,8 @@ namespace ParksLookup.Controllers
       return await query.ToListAsync();
     }
 
-    // GET: api/parks/colorado
-     [HttpGet("{location}")]
+    // GET: api/parks/location=colorado
+     [HttpGet("location={location}")]
      public async Task<ActionResult<IEnumerable<Park>>> GetLocation(string location)
      {
   
@@ -126,6 +126,21 @@ namespace ParksLookup.Controllers
      if (location != null)
      {
        query = query.Where(entry => entry.Location == location);
+     }  
+
+    return await query.ToListAsync();
+    }
+
+    // GET: api/parks/type=national
+     [HttpGet("type={type}")]
+     public async Task<ActionResult<IEnumerable<Park>>> GetType(string type)
+     {
+  
+     var query = _db.Parks.AsQueryable();
+
+     if (type != null)
+     {
+       query = query.Where(entry => entry.Type == type);
      }  
 
     return await query.ToListAsync();
