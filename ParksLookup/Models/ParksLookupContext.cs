@@ -12,10 +12,10 @@ namespace ParksLookup.Models
     {
       builder.Entity<Park>()
         .HasData(
-          new Park { Name="Acadia National Park", Location="Maine", Type="National" },
-          new Park { Name="Arches National Park", Location="Utah", Type="National" },
-          new Park { Name="Eldorado Canyon State Park", Location="Colorado", Type="State" },
-          new Park { Name="Lory State Park", Location="Colorado", Type="State" }
+          new Park { Id = 1, Name="Acadia National Park", Location="Maine", Type="National" },
+          new Park { Id = 2, Name="Arches National Park", Location="Utah", Type="National" },
+          new Park { Id = 3, Name="Eldorado Canyon State Park", Location="Colorado", Type="State" },
+          new Park { Id = 4, Name="Lory State Park", Location="Colorado", Type="State" }
          
         );
     }

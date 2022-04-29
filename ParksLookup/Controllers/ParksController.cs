@@ -100,8 +100,8 @@ namespace ParksLookup.Controllers
       return NoContent();
     }
 
-    // GET: api/Parks/name=ZionNationalPark
-    [HttpGet("name={name}")]
+    // GET: api/Parks/ZionNationalPark
+    [HttpGet("name/")]
     public async Task<ActionResult<IEnumerable<Park>>> GetName(string name)
     {
   
@@ -132,7 +132,7 @@ namespace ParksLookup.Controllers
     }
 
     // GET: api/parks/type/?={query}
-     [HttpGet()]
+     [HttpGet("/type/")]
      public async Task<ActionResult<IEnumerable<Park>>> GetType(string type)
      {
   
