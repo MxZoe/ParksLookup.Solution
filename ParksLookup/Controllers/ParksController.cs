@@ -116,8 +116,8 @@ namespace ParksLookup.Controllers
       return await query.ToListAsync();
     }
 
-    // GET: api/parks/location=colorado
-     [HttpGet("location={location}")]
+    // GET: api/parks/location
+     [HttpGet("location/")]
      public async Task<ActionResult<IEnumerable<Park>>> GetLocation(string location)
      {
   
@@ -131,8 +131,8 @@ namespace ParksLookup.Controllers
     return await query.ToListAsync();
     }
 
-    // GET: api/parks/type=national
-     [HttpGet("type={type}")]
+    // GET: api/parks/type/?={query}
+     [HttpGet()]
      public async Task<ActionResult<IEnumerable<Park>>> GetType(string type)
      {
   
