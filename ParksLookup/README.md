@@ -17,8 +17,8 @@
 ## Description
 
 This api lets the user access a database of national parks.
-The endpoints for this api are documented with swagger and are listed below.
-Endpoints:
+The endpoints for this api are documented with swagger and can be found at localhost:5000 after running "dotnet run" in the terminal.
+G
 ## Setup/Installation Requirements
 
 * Go to https://github.com/MxZoe/ParksLookup.Solution to clone or download the project. 
